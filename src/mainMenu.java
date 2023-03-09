@@ -1,9 +1,12 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class mainMenu extends JFrame implements ActionListener {
-
+    public List<Integer> testData = new ArrayList<>();
     JPanel form = new JPanel();
     JButton changeTestDataBttn = new JButton();
     JLabel currentDataLbl = new JLabel();
@@ -31,7 +34,12 @@ public class mainMenu extends JFrame implements ActionListener {
     private void setText(){
         this.setTitle("Java Interactive Structures");
         currentDataLbl.setText("Current Data:");
-        currentDataTxt.setText("8, 25, 545, 65, 654564, 5454, 45, 8, 25, 545, 65, 654564, 5454, 45");
+        int i;
+        for(i = 0; i < 20; i++)
+        {
+            testData.add(ThreadLocalRandom.current().nextInt(0, 1000 + 1));
+        }
+        currentDataTxt.setText(testData.toString().replace("[", "").replace("]", ""));
         changeTestDataBttn.setText("Change Test Data");
         viewStructuresBttn.setText("View Data Structures");
         viewAlgorithmsBttn.setText("View Sort Algorithms");

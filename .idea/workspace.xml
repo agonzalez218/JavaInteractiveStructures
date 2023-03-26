@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2cda61e-04e3-4d36-b196-4a1b63a0cbbc" name="Changes" comment="">
+    <list default="true" id="e2cda61e-04e3-4d36-b196-4a1b63a0cbbc" name="Changes" comment="Completed Data Structures Form and Methods">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayAlgorithms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayAlgorithms.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayStructures.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayStructures.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/mainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/mainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/numberArraySelect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/numberArraySelect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/displayAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayAlgorithms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/displayStructures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayStructures.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +41,16 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.startApplication">
     <configuration name="startApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="startApplication" />
+      <module name="JavaInteractiveStructures" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="visualizeSortAlgo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="visualizeSortAlgo" />
       <module name="JavaInteractiveStructures" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -55,6 +59,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.startApplication" />
+        <item itemvalue="Application.visualizeSortAlgo" />
       </list>
     </recent_temporary>
   </component>
@@ -88,13 +93,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678746860542</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Completed Data Structures Form and Methods">
+      <created>1679505479872</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679505479872</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit w/ Menu" />
     <MESSAGE value="Added Initial Data Creation" />
     <MESSAGE value="Added Number Select and TestData List File" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Number Select and TestData List File" />
+    <MESSAGE value="Completed Data Structures Form and Methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Data Structures Form and Methods" />
   </component>
 </project>

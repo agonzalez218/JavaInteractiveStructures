@@ -15,11 +15,22 @@ public class displayAlgorithms extends JFrame implements ActionListener {
     List<Integer> testData = new ArrayList<>();
     JLabel currentDataLbl = new JLabel();
     JLabel currentDataTxt = new JLabel();
+    JScrollPane currentDataScrollPane = new JScrollPane(currentDataTxt);
     JLabel bubbleSrtLbl = new JLabel();
+    JLabel bubbleSrtData = new JLabel();
+    JScrollPane bubbleSrtScrollPane = new JScrollPane(bubbleSrtData);
     JLabel selectionSrtLbl = new JLabel();
+    JLabel selectionSrtData = new JLabel();
+    JScrollPane selectionSrtScrollPane = new JScrollPane(selectionSrtData);
     JLabel insertionSrtLbl = new JLabel();
+    JLabel insertionSrtData = new JLabel();
+    JScrollPane insertionSrtScrollPane = new JScrollPane(insertionSrtData);
     JLabel quickSrtLbl = new JLabel();
+    JLabel quickSrtData = new JLabel();
+    JScrollPane quickSrtScrollPane = new JScrollPane(quickSrtData);
     JLabel mergeSrtLbl = new JLabel();
+    JLabel mergeSrtData = new JLabel();
+    JScrollPane mergeSrtScrollPane = new JScrollPane(mergeSrtData);
     JLabel bubbleSrtTimeLbl = new JLabel();
     JLabel selectionSrtTimeLbl = new JLabel();
     JLabel insertionSrtTimeLbl = new JLabel();
@@ -35,55 +46,60 @@ public class displayAlgorithms extends JFrame implements ActionListener {
     JButton add20Bttn = new JButton();
     JButton add100Bttn = new JButton();
     JButton add1000Bttn = new JButton();
-    JScrollPane currentDataScrollPane = new JScrollPane(currentDataTxt);
 
     JPanel form = new JPanel();
 
     private void setLocations(){
-        this.setSize(600, 780);
+        this.setSize(600, 800);
         this.setLocationRelativeTo(null);
         currentDataLbl.setBounds(200,10,200,30);
         currentDataLbl.setHorizontalAlignment(SwingConstants.CENTER);
         currentDataLbl.setVerticalAlignment(SwingConstants.CENTER);
         currentDataScrollPane.setBounds(200,40,200,40);
 
-        bubbleSrtLbl.setBounds(200,90,200,30);
+        bubbleSrtLbl.setBounds(50,90,200,30);
         bubbleSrtLbl.setHorizontalAlignment(SwingConstants.CENTER);
         bubbleSrtLbl.setVerticalAlignment(SwingConstants.CENTER);
-        insertionSrtLbl.setBounds(200,190,200,30);
+        insertionSrtLbl.setBounds(350,90,200,30);
         insertionSrtLbl.setHorizontalAlignment(SwingConstants.CENTER);
         insertionSrtLbl.setVerticalAlignment(SwingConstants.CENTER);
-        quickSrtLbl.setBounds(200,290,200,30);
+        quickSrtLbl.setBounds(50,240,200,30);
         quickSrtLbl.setHorizontalAlignment(SwingConstants.CENTER);
         quickSrtLbl.setVerticalAlignment(SwingConstants.CENTER);
-        mergeSrtLbl.setBounds(200,390,200,30);
+        mergeSrtLbl.setBounds(350,240,200,30);
         mergeSrtLbl.setHorizontalAlignment(SwingConstants.CENTER);
         mergeSrtLbl.setVerticalAlignment(SwingConstants.CENTER);
-        selectionSrtLbl.setBounds(200,490,200,30);
+        selectionSrtLbl.setBounds(200,390,200,30);
         selectionSrtLbl.setHorizontalAlignment(SwingConstants.CENTER);
         selectionSrtLbl.setVerticalAlignment(SwingConstants.CENTER);
 
-        bubbleSrtTimeLbl.setBounds(200,120,200,30);
+        bubbleSrtScrollPane.setBounds(50,120,200,40);
+        insertionSrtScrollPane.setBounds(350,120,200,40);
+        quickSrtScrollPane.setBounds(50,270,200,40);
+        mergeSrtScrollPane.setBounds(350,270,200,40);
+        selectionSrtScrollPane.setBounds(200,420,200,40);
+
+        bubbleSrtTimeLbl.setBounds(50,160,200,30);
         bubbleSrtTimeLbl.setHorizontalAlignment(SwingConstants.CENTER);
         bubbleSrtTimeLbl.setVerticalAlignment(SwingConstants.CENTER);
-        insertionSrtTimeLbl.setBounds(200,220,200,30);
+        insertionSrtTimeLbl.setBounds(350,160,200,30);
         insertionSrtTimeLbl.setHorizontalAlignment(SwingConstants.CENTER);
         insertionSrtTimeLbl.setVerticalAlignment(SwingConstants.CENTER);
-        quickSrtTimeLbl.setBounds(200,320,200,30);
+        quickSrtTimeLbl.setBounds(50,310,200,30);
         quickSrtTimeLbl.setHorizontalAlignment(SwingConstants.CENTER);
         quickSrtTimeLbl.setVerticalAlignment(SwingConstants.CENTER);
-        mergeSrtTimeLbl.setBounds(200,420,200,30);
+        mergeSrtTimeLbl.setBounds(350,310,200,30);
         mergeSrtTimeLbl.setHorizontalAlignment(SwingConstants.CENTER);
         mergeSrtTimeLbl.setVerticalAlignment(SwingConstants.CENTER);
-        selectionSrtTimeLbl.setBounds(200,520,200,30);
+        selectionSrtTimeLbl.setBounds(200,460,200,30);
         selectionSrtTimeLbl.setHorizontalAlignment(SwingConstants.CENTER);
         selectionSrtTimeLbl.setVerticalAlignment(SwingConstants.CENTER);
 
-        bubbleSrtBttn.setBounds(200,150,200,30);
-        selectionSrtBttn.setBounds(200,250,200,30);
-        insertionSrtBttn.setBounds(200,350,200,30);
-        quickSrtBttn.setBounds(200,450,200,30);
-        mergeSrtBttn.setBounds(200,550,200,30);
+        bubbleSrtBttn.setBounds(50,190,200,30);
+        insertionSrtBttn.setBounds(350,190,200,30);
+        quickSrtBttn.setBounds(50,340,200,30);
+        mergeSrtBttn.setBounds(350,340,200,30);
+        selectionSrtBttn.setBounds(200,490,200,30);
 
 
 
@@ -136,6 +152,12 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         this.add(quickSrtTimeLbl);
         this.add(mergeSrtTimeLbl);
 
+        this.add(bubbleSrtScrollPane);
+        this.add(selectionSrtScrollPane);
+        this.add(insertionSrtScrollPane);
+        this.add(quickSrtScrollPane);
+        this.add(mergeSrtScrollPane);
+
         this.add(bubbleSrtLbl);
         this.add(selectionSrtLbl);
         this.add(insertionSrtLbl);
@@ -171,6 +193,9 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         addToForm();
         getTestDataFile();
         currentDataTxt.setText(testData.toString().replace("[", "").replace("]", ""));
+
+        sortTestData();
+
         this.add(this.form);
     }
 
@@ -207,6 +232,188 @@ public class displayAlgorithms extends JFrame implements ActionListener {
             }
         }
     }
+
+    public void sortTestData(){
+        List<Integer> bblSrtList = new ArrayList<>(testData);
+        bubbleSort(bblSrtList);
+        List<Integer> selectionSrtList = new ArrayList<>(testData);
+        selectionSort(selectionSrtList);
+        List<Integer> insertionSrtList = new ArrayList<>(testData);
+        insertionSort(insertionSrtList);
+        List<Integer> quickSrtList = new ArrayList<>(testData);
+
+        long startTime = System.nanoTime();
+        quickSort(quickSrtList, 0, quickSrtList.size()-1);
+        long endTime = System.nanoTime();
+
+        long duration = (endTime - startTime);
+        quickSrtTimeLbl.setText(((float)duration / 1000000000 )+" seconds");
+        quickSrtTimeLbl.setToolTipText(String.format("%.9f", (float)duration/1000000000)+" seconds");
+        quickSrtData.setText(quickSrtList.toString().replace("[", "").replace("]", ""));
+
+        List<Integer> mergeSrtList = new ArrayList<>(testData);
+        startTime = System.nanoTime();
+        mergeSort(mergeSrtList, 0, mergeSrtList.size()-1);
+        endTime = System.nanoTime();
+
+        duration = (endTime - startTime);
+        mergeSrtTimeLbl.setText(((float)duration / 1000000000 )+" seconds");
+        mergeSrtTimeLbl.setToolTipText(String.format("%.9f", (float)duration/1000000000)+" seconds");
+        mergeSrtData.setText(mergeSrtList.toString().replace("[", "").replace("]", ""));
+    }
+
+    public void bubbleSort(List<Integer> unsortedList){
+        long startTime = System.nanoTime();
+
+        int i,j;
+        for( i = 0; i < unsortedList.size(); i++)
+        {
+            for( j = 0; j < unsortedList.size() - i; j++)
+            {
+                if( unsortedList.size() > (j+1) && unsortedList.get(j) > unsortedList.get(j+1) )
+                {
+                    int temp = unsortedList.get(j);
+                    unsortedList.set(j, unsortedList.get(j + 1));
+                    unsortedList.set(j+1, temp);
+                }
+            }
+        }
+
+        long endTime = System.nanoTime();
+
+        long duration = (endTime - startTime);
+        bubbleSrtTimeLbl.setText(((float)duration / 1000000000 )+" seconds");
+        bubbleSrtTimeLbl.setToolTipText(String.format("%.9f", (float)duration/1000000000)+" seconds");
+        bubbleSrtData.setText(unsortedList.toString().replace("[", "").replace("]", ""));
+    }
+
+    public void selectionSort(List<Integer> unsortedList){
+        long startTime = System.nanoTime();
+
+        int i,j;
+        for( i = 0; i < unsortedList.size(); i++)
+        {
+            int min = unsortedList.get(i), minIndex = i;
+            for( j = i; j < unsortedList.size(); j++)
+            {
+                if( unsortedList.get(j) < min)
+                {
+                    min = unsortedList.get(j);
+                    minIndex = j;
+                }
+            }
+            int temp = unsortedList.get(i);
+            unsortedList.set(i, unsortedList.get(minIndex));
+            unsortedList.set(minIndex, temp);
+        }
+
+        long endTime = System.nanoTime();
+
+        long duration = (endTime - startTime);
+        selectionSrtTimeLbl.setText(((float)duration / 1000000000 )+" seconds");
+        selectionSrtTimeLbl.setToolTipText(String.format("%.9f", (float)duration/1000000000)+" seconds");
+        selectionSrtData.setText(unsortedList.toString().replace("[", "").replace("]", ""));
+
+    }
+    public void mergeSort(List<Integer> unsortedList, int left, int right){
+        if (left < right) {
+            int m = left + (right - left) / 2;
+
+            mergeSort(unsortedList, left, m);
+            mergeSort(unsortedList, m + 1, right);
+
+            merge(unsortedList, left, m, right);
+        }
+    }
+    public void merge(List<Integer> unsortedList, int left, int middle, int right){
+        int i, j = 0;
+
+        int n1 = middle - left + 1;
+        int n2 = right - middle;
+
+        int[] leftSide = new int[n1];
+        int[] rightSide = new int[n2];
+
+        for (i = 0; i < n1; ++i)
+            leftSide[i] = unsortedList.get(left + i);
+        for (i = 0; i < n2; ++i)
+            rightSide[i] = unsortedList.get(middle + 1 + i);
+
+        i = 0;
+        int k = left;
+        while (i < n1 && j < n2) {
+            if (leftSide[i] <= rightSide[j]) {
+                unsortedList.set(k,leftSide[i]);
+                i++;
+            }
+            else {
+                unsortedList.set(k,rightSide[j]);
+                j++;
+            }
+            k++;
+        }
+
+        while (i < n1) {
+            unsortedList.set(k, leftSide[i]);
+            i++;
+            k++;
+        }
+
+        while (j < n2) {
+            unsortedList.set(k, rightSide[j]);
+            j++;
+            k++;
+        }
+
+    }
+    public void insertionSort(List<Integer> unsortedList){
+        long startTime = System.nanoTime();
+
+        int i, j;
+        for( i = 0; i < unsortedList.size(); i++)
+        {
+            j = i;
+            while (j > 0 && unsortedList.get(j-1) > unsortedList.get(j))
+            {
+                int temp = unsortedList.get(j-1);
+                unsortedList.set(j-1, unsortedList.get(j));
+                unsortedList.set(j, temp);
+                j--;
+            }
+        }
+        long endTime = System.nanoTime();
+
+        long duration = (endTime - startTime);
+        insertionSrtTimeLbl.setText(((float)duration / 1000000000 )+" seconds");
+        insertionSrtTimeLbl.setToolTipText(String.format("%.9f", (float)duration/1000000000)+" seconds");
+        insertionSrtData.setText(unsortedList.toString().replace("[", "").replace("]", ""));
+    }
+    public void quickSort(List<Integer> unsortedList, int low, int high){
+        if( low < high ){
+            int pi = partition(unsortedList, low, high);
+            quickSort(unsortedList, low, pi - 1);
+            quickSort(unsortedList, pi + 1, high);
+        }
+    }
+
+    public int partition(List<Integer> unsortedList, int low, int high){
+        int pivot = unsortedList.get(high);
+        int i = low - 1, j;
+        for( j = low; j<= high-1; j++ )
+        {
+            if( unsortedList.get(j) < pivot ){
+                i++;
+                int temp = unsortedList.get(j);
+                unsortedList.set(j, unsortedList.get(i));
+                unsortedList.set(i, temp);
+            }
+        }
+        int temp = unsortedList.get(high);
+        unsortedList.set(high, unsortedList.get(i+1));
+        unsortedList.set(i+1, temp);
+        return i+1;
+    }
+
     public void actionPerformed(ActionEvent e) {
         String str = e.getActionCommand();
         GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
@@ -232,6 +439,7 @@ public class displayAlgorithms extends JFrame implements ActionListener {
                     testData.add(ThreadLocalRandom.current().nextInt(0, 1000 + 1));
                 }
                 currentDataTxt.setText(testData.toString().replace("[", "").replace("]", ""));
+                sortTestData();
             }
             case "+100" -> {
                 if( testData.size() + 100 > width )
@@ -248,6 +456,7 @@ public class displayAlgorithms extends JFrame implements ActionListener {
                     testData.add(ThreadLocalRandom.current().nextInt(0, 1000 + 1));
                 }
                 currentDataTxt.setText(testData.toString().replace("[", "").replace("]", ""));
+                sortTestData();
             }
             case "+1000" -> {
                 if( testData.size() + 1000 > width )
@@ -263,6 +472,7 @@ public class displayAlgorithms extends JFrame implements ActionListener {
                     testData.add(ThreadLocalRandom.current().nextInt(0, 1000 + 1));
                 }
                 currentDataTxt.setText(testData.toString().replace("[", "").replace("]", ""));
+                sortTestData();
             }
             case "Visualize Quick Sort" -> {
                 visualizeSortAlgo algorithmsWindow = new visualizeSortAlgo("Quick Sort", testData);

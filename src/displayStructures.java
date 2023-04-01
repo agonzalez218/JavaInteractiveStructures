@@ -124,7 +124,7 @@ public class displayStructures extends JFrame implements ActionListener {
 
         stackScrollPane.setBounds(200,340,200,40);
 
-        enterPushNumber.setBounds(465,370,30,30);
+        enterPushNumber.setBounds(465,380,30,30);
         enterPushNumber.setHorizontalAlignment(SwingConstants.CENTER);
         enterPushNumber.setDocument(new JTextFieldLimit(3));
         popBttn.setBounds(150,380,100,30);

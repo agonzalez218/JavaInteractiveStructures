@@ -247,7 +247,7 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         long endTime = System.nanoTime();
 
         long duration = (endTime - startTime);
-        quickSrtTimeLbl.setText(((float)duration / 1000000000 )+" seconds");
+        quickSrtTimeLbl.setText("Time: "+((float)duration / 1000000000 )+" seconds");
         quickSrtTimeLbl.setToolTipText(String.format("%.9f", (float)duration/1000000000)+" seconds");
         quickSrtData.setText(quickSrtList.toString().replace("[", "").replace("]", ""));
 
@@ -257,7 +257,7 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         endTime = System.nanoTime();
 
         duration = (endTime - startTime);
-        mergeSrtTimeLbl.setText(((float)duration / 1000000000 )+" seconds");
+        mergeSrtTimeLbl.setText("Time: "+((float)duration / 1000000000 )+" seconds");
         mergeSrtTimeLbl.setToolTipText(String.format("%.9f", (float)duration/1000000000)+" seconds");
         mergeSrtData.setText(mergeSrtList.toString().replace("[", "").replace("]", ""));
     }
@@ -282,7 +282,7 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         long endTime = System.nanoTime();
 
         long duration = (endTime - startTime);
-        bubbleSrtTimeLbl.setText(((float)duration / 1000000000 )+" seconds");
+        bubbleSrtTimeLbl.setText("Time: "+((float)duration / 1000000000 )+" seconds");
         bubbleSrtTimeLbl.setToolTipText(String.format("%.9f", (float)duration/1000000000)+" seconds");
         bubbleSrtData.setText(unsortedList.toString().replace("[", "").replace("]", ""));
     }
@@ -310,7 +310,7 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         long endTime = System.nanoTime();
 
         long duration = (endTime - startTime);
-        selectionSrtTimeLbl.setText(((float)duration / 1000000000 )+" seconds");
+        selectionSrtTimeLbl.setText("Time: "+((float)duration / 1000000000 )+" seconds");
         selectionSrtTimeLbl.setToolTipText(String.format("%.9f", (float)duration/1000000000)+" seconds");
         selectionSrtData.setText(unsortedList.toString().replace("[", "").replace("]", ""));
 
@@ -364,8 +364,8 @@ public class displayAlgorithms extends JFrame implements ActionListener {
             j++;
             k++;
         }
-
     }
+
     public void insertionSort(List<Integer> unsortedList){
         long startTime = System.nanoTime();
 
@@ -384,7 +384,7 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         long endTime = System.nanoTime();
 
         long duration = (endTime - startTime);
-        insertionSrtTimeLbl.setText(((float)duration / 1000000000 )+" seconds");
+        insertionSrtTimeLbl.setText("Time: "+((float)duration / 1000000000 )+" seconds");
         insertionSrtTimeLbl.setToolTipText(String.format("%.9f", (float)duration/1000000000)+" seconds");
         insertionSrtData.setText(unsortedList.toString().replace("[", "").replace("]", ""));
     }
@@ -475,24 +475,29 @@ public class displayAlgorithms extends JFrame implements ActionListener {
                 sortTestData();
             }
             case "Visualize Quick Sort" -> {
-                visualizeSortAlgo algorithmsWindow = new visualizeSortAlgo("Quick Sort", testData);
-                algorithmsWindow.setVisible(true);
+                List<Integer> tempList = new ArrayList<>(testData);
+                visualizeQuickSort quickSorter = new visualizeQuickSort("Quick Sort", tempList);
+                quickSorter.setVisible(true);
             }
             case "Visualize Bubble Sort" -> {
-                visualizeSortAlgo algorithmsWindow = new visualizeSortAlgo("Bubble Sort", testData);
-                algorithmsWindow.setVisible(true);
+                List<Integer> tempList = new ArrayList<>(testData);
+                visualizeBubbleSort bubbleSorter = new visualizeBubbleSort("Bubble Sort", tempList);
+                bubbleSorter.setVisible(true);
             }
             case "Visualize Merge Sort" -> {
-                visualizeSortAlgo algorithmsWindow = new visualizeSortAlgo("Merge Sort", testData);
-                algorithmsWindow.setVisible(true);
+                List<Integer> tempList = new ArrayList<>(testData);
+                visualizeMergeSort mergeSorter = new visualizeMergeSort("Merge Sort", tempList);
+                mergeSorter.setVisible(true);
             }
             case "Visualize Insertion Sort" -> {
-                visualizeSortAlgo algorithmsWindow = new visualizeSortAlgo("Insertion Sort", testData);
-                algorithmsWindow.setVisible(true);
+                List<Integer> tempList = new ArrayList<>(testData);
+                visualizeInsertionSort insertionSorter = new visualizeInsertionSort("Insertion Sort", tempList);
+                insertionSorter.setVisible(true);
             }
             case "Visualize Selection Sort" -> {
-                visualizeSortAlgo algorithmsWindow = new visualizeSortAlgo("Selection Sort", testData);
-                algorithmsWindow.setVisible(true);
+                List<Integer> tempList = new ArrayList<>(testData);
+                visualizeSelectionSort selectionSorter = new visualizeSelectionSort("Selection Sort", tempList);
+                selectionSorter.setVisible(true);
             }
         }
     }

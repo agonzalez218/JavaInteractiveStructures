@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2cda61e-04e3-4d36-b196-4a1b63a0cbbc" name="Changes" comment="Added Display and Visualize Sort Algorithms Windows">
+    <list default="true" id="e2cda61e-04e3-4d36-b196-4a1b63a0cbbc" name="Changes" comment="Added Sort Algorithm Methods">
+      <change afterPath="$PROJECT_DIR$/src/visualizeSelectionSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayAlgorithms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayAlgorithms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeSortAlgo$Line.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeSortAlgo.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/displayAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayAlgorithms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/displayStructures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayStructures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visualizeSortAlgo.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +46,33 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Flyin\IdeaProjects\JavaInteractiveStructures\src" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.startApplication">
+    <configuration name="Animate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Animate" />
+      <module name="JavaInteractiveStructures" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BubbleSortWorker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BubbleSortWorker" />
+      <module name="JavaInteractiveStructures" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VisMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VisMain" />
+      <module name="JavaInteractiveStructures" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="startApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="startApplication" />
       <module name="JavaInteractiveStructures" />
@@ -58,6 +90,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.startApplication" />
+        <item itemvalue="Application.BubbleSortWorker" />
+        <item itemvalue="Application.Animate" />
+        <item itemvalue="Application.VisMain" />
         <item itemvalue="Application.visualizeSortAlgo" />
       </list>
     </recent_temporary>
@@ -106,8 +141,26 @@
       <option name="project" value="LOCAL" />
       <updated>1679873541039</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Sort Algorithm Methods">
+      <created>1680182884264</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680182884264</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit w/ Menu" />
@@ -115,6 +168,17 @@
     <MESSAGE value="Added Number Select and TestData List File" />
     <MESSAGE value="Completed Data Structures Form and Methods" />
     <MESSAGE value="Added Display and Visualize Sort Algorithms Windows" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Display and Visualize Sort Algorithms Windows" />
+    <MESSAGE value="Added Sort Algorithm Methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Sort Algorithm Methods" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.ConcurrentModificationException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

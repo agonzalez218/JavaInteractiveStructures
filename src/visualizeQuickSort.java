@@ -142,7 +142,6 @@ public class visualizeQuickSort extends JComponent{
         int width = 1000;
         GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
         int screenWidth = gd.getDisplayMode().getWidth()-100;
-        System.out.println(testDataSize);
         if( testDataSize > 500 )
         {
             if( testDataSize > screenWidth)

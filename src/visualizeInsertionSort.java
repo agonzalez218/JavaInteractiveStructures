@@ -8,6 +8,7 @@ public class visualizeInsertionSort extends JComponent{
 
     private int[]items;
     private final int lineWidth;
+    private final int max;
     private final List<Integer> currentFocus = new ArrayList<>();
 
     @Override
@@ -17,11 +18,14 @@ public class visualizeInsertionSort extends JComponent{
 
         for (int i = 0; i < items.length; i++)
         {
+            int height = 300-(int) (((float)items[i] / max) * 290);
+            if( height == 300 )
+                height = 299;
             if( currentFocus.contains(i) )
                 g.setColor( Color.red );
             else
                 g.setColor( Color.BLACK );
-            g.drawLine(i*lineWidth+10, 300, i*lineWidth+10, 300-items[i]/4);
+            g.drawLine(i*lineWidth+10, 300, i*lineWidth+10, height);
         }
     }
 
@@ -84,8 +88,9 @@ public class visualizeInsertionSort extends JComponent{
         new InsertionSortWorker(items).execute();
     }
 
-    public visualizeInsertionSort( String chosenSortType, List<Integer> testData) {
+    public visualizeInsertionSort( String chosenSortType, List<Integer> testData, int max) {
         JFrame form = new JFrame();
+        this.max = max;
         form.setTitle("Visualize "+ chosenSortType+" Algorithm");
         form.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         int testDataSize = testData.size();

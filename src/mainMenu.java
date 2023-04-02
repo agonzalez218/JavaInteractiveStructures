@@ -58,7 +58,6 @@ public class mainMenu extends JFrame implements ActionListener {
         this.add( exitBttn );
         exitBttn.addActionListener(this);
         this.add(this.form);
-
     }
 
 

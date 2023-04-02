@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -57,49 +58,49 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         currentDataLbl.setVerticalAlignment(SwingConstants.CENTER);
         currentDataScrollPane.setBounds(200,40,200,40);
 
-        bubbleSrtLbl.setBounds(50,90,200,30);
+        bubbleSrtLbl.setBounds(50,130,200,30);
         bubbleSrtLbl.setHorizontalAlignment(SwingConstants.CENTER);
         bubbleSrtLbl.setVerticalAlignment(SwingConstants.CENTER);
-        insertionSrtLbl.setBounds(350,90,200,30);
+        insertionSrtLbl.setBounds(350,130,200,30);
         insertionSrtLbl.setHorizontalAlignment(SwingConstants.CENTER);
         insertionSrtLbl.setVerticalAlignment(SwingConstants.CENTER);
-        quickSrtLbl.setBounds(50,240,200,30);
+        quickSrtLbl.setBounds(50,280,200,30);
         quickSrtLbl.setHorizontalAlignment(SwingConstants.CENTER);
         quickSrtLbl.setVerticalAlignment(SwingConstants.CENTER);
-        mergeSrtLbl.setBounds(350,240,200,30);
+        mergeSrtLbl.setBounds(350,280,200,30);
         mergeSrtLbl.setHorizontalAlignment(SwingConstants.CENTER);
         mergeSrtLbl.setVerticalAlignment(SwingConstants.CENTER);
-        selectionSrtLbl.setBounds(200,390,200,30);
+        selectionSrtLbl.setBounds(200,430,200,30);
         selectionSrtLbl.setHorizontalAlignment(SwingConstants.CENTER);
         selectionSrtLbl.setVerticalAlignment(SwingConstants.CENTER);
 
-        bubbleSrtScrollPane.setBounds(50,120,200,40);
-        insertionSrtScrollPane.setBounds(350,120,200,40);
-        quickSrtScrollPane.setBounds(50,270,200,40);
-        mergeSrtScrollPane.setBounds(350,270,200,40);
-        selectionSrtScrollPane.setBounds(200,420,200,40);
+        bubbleSrtScrollPane.setBounds(50,160,200,40);
+        insertionSrtScrollPane.setBounds(350,160,200,40);
+        quickSrtScrollPane.setBounds(50,310,200,40);
+        mergeSrtScrollPane.setBounds(350,310,200,40);
+        selectionSrtScrollPane.setBounds(200,460,200,40);
 
-        bubbleSrtTimeLbl.setBounds(50,160,200,30);
+        bubbleSrtTimeLbl.setBounds(50,200,200,30);
         bubbleSrtTimeLbl.setHorizontalAlignment(SwingConstants.CENTER);
         bubbleSrtTimeLbl.setVerticalAlignment(SwingConstants.CENTER);
-        insertionSrtTimeLbl.setBounds(350,160,200,30);
+        insertionSrtTimeLbl.setBounds(350,200,200,30);
         insertionSrtTimeLbl.setHorizontalAlignment(SwingConstants.CENTER);
         insertionSrtTimeLbl.setVerticalAlignment(SwingConstants.CENTER);
-        quickSrtTimeLbl.setBounds(50,310,200,30);
+        quickSrtTimeLbl.setBounds(50,350,200,30);
         quickSrtTimeLbl.setHorizontalAlignment(SwingConstants.CENTER);
         quickSrtTimeLbl.setVerticalAlignment(SwingConstants.CENTER);
-        mergeSrtTimeLbl.setBounds(350,310,200,30);
+        mergeSrtTimeLbl.setBounds(350,350,200,30);
         mergeSrtTimeLbl.setHorizontalAlignment(SwingConstants.CENTER);
         mergeSrtTimeLbl.setVerticalAlignment(SwingConstants.CENTER);
-        selectionSrtTimeLbl.setBounds(200,460,200,30);
+        selectionSrtTimeLbl.setBounds(200,500,200,30);
         selectionSrtTimeLbl.setHorizontalAlignment(SwingConstants.CENTER);
         selectionSrtTimeLbl.setVerticalAlignment(SwingConstants.CENTER);
 
-        bubbleSrtBttn.setBounds(50,190,200,30);
-        insertionSrtBttn.setBounds(350,190,200,30);
-        quickSrtBttn.setBounds(50,340,200,30);
-        mergeSrtBttn.setBounds(350,340,200,30);
-        selectionSrtBttn.setBounds(200,490,200,30);
+        bubbleSrtBttn.setBounds(50,230,200,30);
+        insertionSrtBttn.setBounds(350,230,200,30);
+        quickSrtBttn.setBounds(50,380,200,30);
+        mergeSrtBttn.setBounds(350,380,200,30);
+        selectionSrtBttn.setBounds(200,530,200,30);
 
 
 
@@ -112,6 +113,12 @@ public class displayAlgorithms extends JFrame implements ActionListener {
     }
 
     private void setText(){
+
+        ImageIcon icon = (ImageIcon)UIManager.getIcon("OptionPane.informationIcon");
+        Image image = icon.getImage();
+        Image scaledImage = image.getScaledInstance(25, 25, Image.SCALE_SMOOTH);
+        Icon scaledIcon = new ImageIcon( scaledImage );
+
         this.currentDataLbl.setText("Current Test Data:");
         this.setTitle("Sort Algorithms");
 
@@ -121,16 +128,25 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         add1000Bttn.setText("+1000");
 
         bubbleSrtLbl.setText("Bubble Sort");
+        this.bubbleSrtLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.bubbleSrtLbl.setIcon( scaledIcon );
+        this.bubbleSrtLbl.setToolTipText("<html><p>" + "Bubble Sort: <br>Sorts numbers by iterating through array, <br>swapping each value higher than the current,<br> taking highest to end of array until sorted. " + "</p></html>");
         selectionSrtLbl.setText("Selection Sort");
+        this.selectionSrtLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.selectionSrtLbl.setIcon( scaledIcon );
+        this.selectionSrtLbl.setToolTipText("<html><p>" + "Selection Sort: <br>Sorts numbers by iterating through array, <br>swapping minimum value with first index in <br>unsorted array until sorted" + "</p></html>");
         insertionSrtLbl.setText("Insertion Sort");
+        this.insertionSrtLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.insertionSrtLbl.setIcon( scaledIcon );
+        this.insertionSrtLbl.setToolTipText("<html><p>" + "Insertion Sort: <br>Sorts numbers by swapping or inserting <br>values into correct place behind current index, <br>essentially sorting as it iterates. " + "</p></html>");
         quickSrtLbl.setText("Quick Sort");
+        this.quickSrtLbl.setIcon( scaledIcon );
+        this.quickSrtLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.quickSrtLbl.setToolTipText("<html><p>" + "Quick Sort: <br>Sorts numbers by creating pivots and partitions in array. <br>The current index is used as a pivot, then partitions array to put lower values before and higher values after pivot." + "</p></html>");
         mergeSrtLbl.setText("Merge Sort");
-
-        bubbleSrtTimeLbl.setText("Bubble Sort");
-        selectionSrtTimeLbl.setText("Selection Sort");
-        insertionSrtTimeLbl.setText("Insertion Sort");
-        quickSrtTimeLbl.setText("Quick Sort");
-        mergeSrtTimeLbl.setText("Merge Sort");
+        this.mergeSrtLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.mergeSrtLbl.setIcon( scaledIcon );
+        this.mergeSrtLbl.setToolTipText("<html><p>" + "Merge Sort: <br>Sorts numbers by creating sub arrays,<br> initially size of 2 each. Then, as it sorts <br>each array will merge them until it is <br>one sorted array." + "</p></html>");
 
         bubbleSrtBttn.setText("Visualize Bubble Sort");
         selectionSrtBttn.setText("Visualize Selection Sort");
@@ -199,6 +215,11 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         this.add(this.form);
     }
 
+    /*
+      Description:
+          Opens testData.txt file and adds all integers into the TestData list.
+          If file not found, fill TestData list with random numbers and create file.
+    */
     public void getTestDataFile() {
         try {
             File myObj = new File("testData.txt");
@@ -476,27 +497,27 @@ public class displayAlgorithms extends JFrame implements ActionListener {
             }
             case "Visualize Quick Sort" -> {
                 List<Integer> tempList = new ArrayList<>(testData);
-                visualizeQuickSort quickSorter = new visualizeQuickSort("Quick Sort", tempList);
+                visualizeQuickSort quickSorter = new visualizeQuickSort("Quick Sort", tempList, Collections.max(tempList));
                 quickSorter.setVisible(true);
             }
             case "Visualize Bubble Sort" -> {
                 List<Integer> tempList = new ArrayList<>(testData);
-                visualizeBubbleSort bubbleSorter = new visualizeBubbleSort("Bubble Sort", tempList);
+                visualizeBubbleSort bubbleSorter = new visualizeBubbleSort("Bubble Sort", tempList, Collections.max(tempList));
                 bubbleSorter.setVisible(true);
             }
             case "Visualize Merge Sort" -> {
                 List<Integer> tempList = new ArrayList<>(testData);
-                visualizeMergeSort mergeSorter = new visualizeMergeSort("Merge Sort", tempList);
+                visualizeMergeSort mergeSorter = new visualizeMergeSort("Merge Sort", tempList, Collections.max(tempList));
                 mergeSorter.setVisible(true);
             }
             case "Visualize Insertion Sort" -> {
                 List<Integer> tempList = new ArrayList<>(testData);
-                visualizeInsertionSort insertionSorter = new visualizeInsertionSort("Insertion Sort", tempList);
+                visualizeInsertionSort insertionSorter = new visualizeInsertionSort("Insertion Sort", tempList, Collections.max(tempList));
                 insertionSorter.setVisible(true);
             }
             case "Visualize Selection Sort" -> {
                 List<Integer> tempList = new ArrayList<>(testData);
-                visualizeSelectionSort selectionSorter = new visualizeSelectionSort("Selection Sort", tempList);
+                visualizeSelectionSort selectionSorter = new visualizeSelectionSort("Selection Sort", tempList, Collections.max(tempList));
                 selectionSorter.setVisible(true);
             }
         }

@@ -2,6 +2,7 @@ import javax.swing.*;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -71,12 +72,11 @@ public class displayStructures extends JFrame implements ActionListener {
     JTextField enterQueueNumber = new JTextField("#");
     JLabel currentDataLbl = new JLabel();
     JLabel currentDataTxt = new JLabel();
-
     JScrollPane currentDataScrollPane = new JScrollPane(currentDataTxt);
     JPanel form = new JPanel();
 
     private void setLocations(){
-        this.setSize(600, 620);
+        this.setSize(600, 800);
         this.setLocationRelativeTo(null);
         currentDataLbl.setBounds(200,10,200,30);
         currentDataLbl.setHorizontalAlignment(SwingConstants.CENTER);
@@ -84,81 +84,113 @@ public class displayStructures extends JFrame implements ActionListener {
 
         currentDataScrollPane.setBounds(200,40,200,40);
 
-        setLbl.setBounds(200,80,200,30);
+        setLbl.setBounds(200,100,200,30);
         setLbl.setHorizontalAlignment(SwingConstants.CENTER);
         setLbl.setVerticalAlignment(SwingConstants.CENTER);
 
-        setScrollPane.setBounds(200,110,200,40);
+        setScrollPane.setBounds(200,130,200,40);
 
-        BSTLbl.setBounds(200,150,200,30);
+        BSTLbl.setBounds(200,190,200,30);
         BSTLbl.setHorizontalAlignment(SwingConstants.CENTER);
         BSTLbl.setVerticalAlignment(SwingConstants.CENTER);
 
-        preorderLbl.setBounds(50,170,200,30);
+        preorderLbl.setBounds(50,220,200,30);
         preorderLbl.setHorizontalAlignment(SwingConstants.CENTER);
         preorderLbl.setVerticalAlignment(SwingConstants.CENTER);
 
-        preorderScrollPane.setBounds(100,200,100,40);
+        preorderScrollPane.setBounds(80,250,130,40);
 
-        inorderLbl.setBounds(200,170,200,30);
+        inorderLbl.setBounds(200,220,200,30);
         inorderLbl.setHorizontalAlignment(SwingConstants.CENTER);
         inorderLbl.setVerticalAlignment(SwingConstants.CENTER);
 
-        inorderScrollPane.setBounds(250,200,100,40);
+        inorderScrollPane.setBounds(235,250,125,40);
 
-        postorderLbl.setBounds(350,170,200,30);
+        postorderLbl.setBounds(350,220,200,30);
         postorderLbl.setHorizontalAlignment(SwingConstants.CENTER);
         postorderLbl.setVerticalAlignment(SwingConstants.CENTER);
 
-        postorderScrollPane.setBounds(400,200,100,40);
+        postorderScrollPane.setBounds(380,250,130,40);
 
-        LLLbl.setBounds(200,240,200,30);
+        LLLbl.setBounds(200,310,200,30);
         LLLbl.setHorizontalAlignment(SwingConstants.CENTER);
         LLLbl.setVerticalAlignment(SwingConstants.CENTER);
 
-        LLScrollPane.setBounds(200,270,200,40);
+        LLScrollPane.setBounds(200,340,200,40);
 
-        stackLbl.setBounds(200,310,200,30);
+        stackLbl.setBounds(200,400,200,30);
         stackLbl.setHorizontalAlignment(SwingConstants.CENTER);
         stackLbl.setVerticalAlignment(SwingConstants.CENTER);
 
-        stackScrollPane.setBounds(200,340,200,40);
+        stackScrollPane.setBounds(200,430,200,40);
 
-        enterPushNumber.setBounds(465,380,30,30);
+        enterPushNumber.setBounds(465,490,30,30);
         enterPushNumber.setHorizontalAlignment(SwingConstants.CENTER);
         enterPushNumber.setDocument(new JTextFieldLimit(3));
-        popBttn.setBounds(150,380,100,30);
-        pushBttn.setBounds(350,380,100,30);
+        popBttn.setBounds(150,490,100,30);
+        pushBttn.setBounds(350,490,100,30);
 
-        queueLbl.setBounds(200,410,200,30);
+        queueLbl.setBounds(200,550,200,30);
         queueLbl.setHorizontalAlignment(SwingConstants.CENTER);
         queueLbl.setVerticalAlignment(SwingConstants.CENTER);
 
-        queueScrollPane.setBounds(200,440,200,40);
+        queueScrollPane.setBounds(200,580,200,40);
 
-        enterQueueNumber.setBounds(465,480,30,30);
+        enterQueueNumber.setBounds(465,640,30,30);
         enterQueueNumber.setHorizontalAlignment(SwingConstants.CENTER);
         enterQueueNumber.setDocument(new JTextFieldLimit(3));
-        dequeueBttn.setBounds(150,480,100,30);
-        enqueueBttn.setBounds(350,480,100,30);
+        dequeueBttn.setBounds(150,640,100,30);
+        enqueueBttn.setBounds(350,640,100,30);
 
-        mainMenuBttn.setBounds(200,540,200,30);
+        mainMenuBttn.setBounds(200,700,200,30);
 
     }
 
     private void setText(){
+
+        ImageIcon icon = (ImageIcon)UIManager.getIcon("OptionPane.informationIcon");
+        Image image = icon.getImage();
+        Image scaledImage = image.getScaledInstance(25, 25, Image.SCALE_SMOOTH);
+        Icon scaledIcon = new ImageIcon( scaledImage );
+
         this.setTitle("Data Structures");
         this.currentDataLbl.setText("Current Test Data:");
         this.setLbl.setText("Set Structure:");
+        this.setLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.setLbl.setIcon( scaledIcon );
+        this.setLbl.setToolTipText("<html><p>" + "Set Structure: <br> Only allows unique values and does not add duplicates" + "</p></html>");
         this.BSTLbl.setText("Binary Search Tree Structure:");
+        this.BSTLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.BSTLbl.setIcon( scaledIcon );
+        this.BSTLbl.setToolTipText("<html><p>" + "Binary Search Tree: <br> Uses Linked List structure to create a Tree structure. <br> The tree starts with a single node called the root, then <br> every value less than goes the left subtree and <br> values higher go the the right subtree." + "</p></html>");
         this.preorderLbl.setText("Pre-order Print:");
+        this.preorderLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.preorderLbl.setIcon( scaledIcon );
+        this.preorderLbl.setIcon( scaledIcon );
+        this.preorderLbl.setToolTipText("<html><p>" + "Preorder Print Method: <br> This displays the nodes in order from left subtree then to the root then to right subtree" + "</p></html>");
         this.inorderLbl.setText("In-order Print:");
+        this.inorderLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.inorderLbl.setIcon( scaledIcon );
+        this.inorderLbl.setIcon( scaledIcon );
+        this.inorderLbl.setToolTipText("<html><p>" + "Inorder Print Method: <br> This displays the nodes sorted and in order from root to the left subtree then to the right subtree" + "</p></html>");
         this.postorderLbl.setText("Post-order Print:");
+        this.postorderLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.postorderLbl.setIcon( scaledIcon );
+        this.postorderLbl.setToolTipText("<html><p>" + "Postorder Print Method: <br> This displays the nodes in order from left subtree to the right subtree then to the root" + "</p></html>");
         this.LLLbl.setText("Linked List Structure:");
+        this.LLLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.LLLbl.setIcon( scaledIcon );
+        this.LLLbl.setToolTipText("<html><p>" + "Linked List Structure: <br>Uses a node class to store two values for each element in list. <ul> <li>a reference to the next linked node in the list</li> <li>and the node's data value</li></ul>" + "</p></html>");
         this.stackLbl.setText("Stack Structure:");
+        this.stackLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.stackLbl.setIcon( scaledIcon );
+        this.stackLbl.setToolTipText("<html><p>" + "Stack Structure: <br>Uses linked list structure to implement first in, last out structure" + "</p></html>");
         this.pushBttn.setText("Push");
         this.popBttn.setText("Pop");
         this.queueLbl.setText("Queue Structure:");
+        this.queueLbl.setHorizontalTextPosition(SwingConstants.LEFT);
+        this.queueLbl.setIcon( scaledIcon );
+        this.queueLbl.setToolTipText("<html><p>" + "Queue Structure: <br>Uses linked list structure to implement first in, first out structure" + "</p></html>");
         this.enqueueBttn.setText("Enqueue");
         this.dequeueBttn.setText("Dequeue");
         this.mainMenuBttn.setText("Return to Main Menu");
@@ -327,6 +359,11 @@ public class displayStructures extends JFrame implements ActionListener {
         LLTxt.setText(String.valueOf(LLstring));
     }
 
+    /*
+      Description:
+          Opens testData.txt file and adds all integers into the TestData list.
+          If file not found, fill TestData list with random numbers and create file.
+    */
     public void getTestDataFile() {
         try {
             File myObj = new File("testData.txt");

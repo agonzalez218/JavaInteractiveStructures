@@ -1,13 +1,10 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class numberArraySelect extends JFrame implements ActionListener {
@@ -103,45 +100,6 @@ public class numberArraySelect extends JFrame implements ActionListener {
         }
     }
 
-    /*
-      Description:
-          Opens testData.txt file and adds all integers into the TestData list.
-          If file not found, fill TestData list with random numbers and create file.
-    */
-    public void getTestDataFile() {
-        try {
-            File myObj = new File("testData.txt");
-            Scanner myReader = new Scanner(myObj);
-            int counter = 0;
-            while (myReader.hasNextLine()) {
-                counter += 1;
-                try {
-                    newTestData.add(Integer.valueOf(myReader.nextLine()));
-                }
-                catch(NumberFormatException n){
-                    System.out.println("Line " + counter + " in file did not contain integer");
-                }
-            }
-            myReader.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("Error in Main Menu finding file, creating new one...");
-            int i;
-            try {
-                FileWriter myWriter = new FileWriter("testData.txt");
-                for(i = 0; i < 20; i++)
-                {
-                    newTestData.add(ThreadLocalRandom.current().nextInt(0, 1000 + 1));
-                    myWriter.write(newTestData.get(i).toString());
-                    myWriter.write("\n");
-                }
-                myWriter.close();
-            } catch (IOException ex) {
-                System.out.println("An error occurred.");
-                ex.printStackTrace();
-            }
-        }
-    }
-
     public void actionPerformed(ActionEvent e) {
         String str = e.getActionCommand();
         switch (str) {
@@ -170,7 +128,12 @@ public class numberArraySelect extends JFrame implements ActionListener {
                     ex.printStackTrace();
                 }
             }
-            case "Dump Test Data" -> getTestDataFile();
+            case "Dump Test Data" ->
+            {
+                dumpIntegers dump = new dumpIntegers();
+                this.setVisible(false);
+                dump.setVisible(true);
+            }
             default -> {
                 arrayChanged = true;
                 newTestData.add(Integer.valueOf(str));

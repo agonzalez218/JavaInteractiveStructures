@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2cda61e-04e3-4d36-b196-4a1b63a0cbbc" name="Changes" comment="Added Sort Algorithm Methods">
-      <change afterPath="$PROJECT_DIR$/src/visualizeSelectionSort.java" afterDir="false" />
+    <list default="true" id="e2cda61e-04e3-4d36-b196-4a1b63a0cbbc" name="Changes" comment="Added Visualize Sort Algorithms">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayAlgorithms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayAlgorithms.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeSortAlgo$Line.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeSortAlgo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeInsertionSort$InsertionSortWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeInsertionSort$InsertionSortWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeInsertionSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeInsertionSort.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/displayAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayAlgorithms.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/displayStructures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayStructures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visualizeSortAlgo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/numberArraySelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/numberArraySelect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visualizeBubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualizeBubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visualizeInsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualizeInsertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visualizeMergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualizeMergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visualizeQuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualizeQuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visualizeSelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualizeSelectionSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +152,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680182884264</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added Visualize Sort Algorithms">
+      <created>1680320339531</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680320339531</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added Visualize Sort Algorithms">
+      <created>1680320349578</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680320349578</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,7 +187,8 @@
     <MESSAGE value="Completed Data Structures Form and Methods" />
     <MESSAGE value="Added Display and Visualize Sort Algorithms Windows" />
     <MESSAGE value="Added Sort Algorithm Methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Sort Algorithm Methods" />
+    <MESSAGE value="Added Visualize Sort Algorithms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Visualize Sort Algorithms" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -15,12 +15,12 @@ public class mainMenu extends JFrame implements ActionListener {
     JPanel form = new JPanel();
     JButton changeTestDataBttn = new JButton();
     JLabel currentDataLbl = new JLabel();
-
     JLabel currentDataTxt = new JLabel();
     JScrollPane scrollPane = new JScrollPane(currentDataTxt);
     JButton viewStructuresBttn = new JButton();
     JButton viewAlgorithmsBttn = new JButton();
     JButton exitBttn = new JButton();
+    boolean error = false;
 
     private void setLocations(){
         this.setSize(325, 350);
@@ -60,7 +60,6 @@ public class mainMenu extends JFrame implements ActionListener {
         this.add(this.form);
     }
 
-
     public mainMenu(){
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.form.setLayout(null);
@@ -69,10 +68,14 @@ public class mainMenu extends JFrame implements ActionListener {
         setText();
         addToForm();
         this.setVisible(true);
+        if(error)
+        {
+            JOptionPane.showMessageDialog(null, "ERROR: Line(s) contained illegal character(s) and were not added. Only integers allowed...");
+            setTestDataFile();
+        }
     }
     public void actionPerformed(ActionEvent e) {
         String str = e.getActionCommand();
-
         setTestDataFile();
 
         switch (str) {
@@ -141,6 +144,7 @@ public class mainMenu extends JFrame implements ActionListener {
                 }
                 catch(NumberFormatException n){
                     System.out.println("Line " + counter + " in file did not contain integer");
+                    error = true;
                 }
             }
             myReader.close();

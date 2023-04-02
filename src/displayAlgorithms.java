@@ -47,7 +47,6 @@ public class displayAlgorithms extends JFrame implements ActionListener {
     JButton add20Bttn = new JButton();
     JButton add100Bttn = new JButton();
     JButton add1000Bttn = new JButton();
-
     JPanel form = new JPanel();
 
     private void setLocations(){
@@ -254,6 +253,12 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         }
     }
 
+    /*
+      Description:
+          Creates copy of test data and calls each sort function with copies to prevent using sorted data.
+          Time for quick and merge sort tracked in this function and results updated through here since
+          these algorithms utilize recursion.
+    */
     public void sortTestData(){
         List<Integer> bblSrtList = new ArrayList<>(testData);
         bubbleSort(bblSrtList);
@@ -283,6 +288,10 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         mergeSrtData.setText(mergeSrtList.toString().replace("[", "").replace("]", ""));
     }
 
+    /*
+      Description:
+          Sorts test data list using bubble sort method then displays time and results
+    */
     public void bubbleSort(List<Integer> unsortedList){
         long startTime = System.nanoTime();
 
@@ -308,6 +317,10 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         bubbleSrtData.setText(unsortedList.toString().replace("[", "").replace("]", ""));
     }
 
+    /*
+      Description:
+          Sorts test data list using selection sort method then displays time and results
+    */
     public void selectionSort(List<Integer> unsortedList){
         long startTime = System.nanoTime();
 
@@ -336,6 +349,11 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         selectionSrtData.setText(unsortedList.toString().replace("[", "").replace("]", ""));
 
     }
+
+    /*
+      Description:
+          Sorts test data list using merge sort method
+    */
     public void mergeSort(List<Integer> unsortedList, int left, int right){
         if (left < right) {
             int m = left + (right - left) / 2;
@@ -346,6 +364,11 @@ public class displayAlgorithms extends JFrame implements ActionListener {
             merge(unsortedList, left, m, right);
         }
     }
+
+    /*
+      Description:
+          Merges two arrays for use in merge sort method
+    */
     public void merge(List<Integer> unsortedList, int left, int middle, int right){
         int i, j = 0;
 
@@ -387,6 +410,10 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         }
     }
 
+    /*
+      Description:
+          Sorts test data list using insertion sort method then displays time and results
+    */
     public void insertionSort(List<Integer> unsortedList){
         long startTime = System.nanoTime();
 
@@ -409,6 +436,11 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         insertionSrtTimeLbl.setToolTipText(String.format("%.9f", (float)duration/1000000000)+" seconds");
         insertionSrtData.setText(unsortedList.toString().replace("[", "").replace("]", ""));
     }
+
+    /*
+      Description:
+          Sorts test data list using quick sort method
+    */
     public void quickSort(List<Integer> unsortedList, int low, int high){
         if( low < high ){
             int pi = partition(unsortedList, low, high);
@@ -417,6 +449,10 @@ public class displayAlgorithms extends JFrame implements ActionListener {
         }
     }
 
+    /*
+      Description:
+          Creates partition using pivot, putting larger numbers above pivot and smaller numbers are put before
+    */
     public int partition(List<Integer> unsortedList, int low, int high){
         int pivot = unsortedList.get(high);
         int i = low - 1, j;

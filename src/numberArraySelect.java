@@ -9,7 +9,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class numberArraySelect extends JFrame implements ActionListener {
     List<Integer> newTestData = new ArrayList<>();
-
     boolean arrayChanged = false;
     JPanel form = new JPanel();
     JButton mainMenuBttn = new JButton();
@@ -40,7 +39,6 @@ public class numberArraySelect extends JFrame implements ActionListener {
         this.add( fillRdmBttn );
         fillRdmBttn.addActionListener(this);
     }
-
 
     public numberArraySelect(){
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

@@ -65,7 +65,6 @@ public class displayStructures extends JFrame implements ActionListener {
     JTextField enterPushNumber = new JTextField("#");
     JLabel queueLbl = new JLabel();
     JLabel queueTxt = new JLabel();
-
     JScrollPane queueScrollPane = new JScrollPane(queueTxt);
     JButton enqueueBttn = new JButton();
     JButton dequeueBttn = new JButton();
@@ -143,11 +142,9 @@ public class displayStructures extends JFrame implements ActionListener {
         enqueueBttn.setBounds(350,640,100,30);
 
         mainMenuBttn.setBounds(200,700,200,30);
-
     }
 
     private void setText(){
-
         ImageIcon icon = (ImageIcon)UIManager.getIcon("OptionPane.informationIcon");
         Image image = icon.getImage();
         Image scaledImage = image.getScaledInstance(25, 25, Image.SCALE_SMOOTH);
@@ -228,7 +225,6 @@ public class displayStructures extends JFrame implements ActionListener {
         mainMenuBttn.addActionListener(this);
     }
 
-
     public displayStructures(){
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.form.setLayout(null);
@@ -254,6 +250,10 @@ public class displayStructures extends JFrame implements ActionListener {
         this.add(this.form);
     }
 
+    /*
+      Description:
+          Iterates through test data and adds each element to list. If element in list, skip element and do not add.
+    */
     public void createSet(){
         int i;
         List<Integer> set = new ArrayList<>();
@@ -267,6 +267,10 @@ public class displayStructures extends JFrame implements ActionListener {
         setTxt.setText(set.toString().replace("[", "").replace("]", ""));
     }
 
+    /*
+      Description:
+          Node class used for Binary Search Tree
+    */
     static class Node{
         int data;
         Node left, right;
@@ -278,6 +282,11 @@ public class displayStructures extends JFrame implements ActionListener {
         }
     }
 
+    /*
+      Description:
+          Inserts a given value to its appropriate placement in binary search tree. While traverse tree until
+          placement found, if current value higher than node, go right if lower go left and continue until added.
+    */
     Node insertBST(Node root, int val)
     {
         if( root == null )
@@ -295,6 +304,11 @@ public class displayStructures extends JFrame implements ActionListener {
         return root;
     }
 
+    /*
+      Description:
+          Iterates through test data and inserts values into initialized Binary Search Tree made using Node structure.
+          Then, calls traverseBST function to create print method strings.
+    */
     public void createBST(){
         int i;
         BST = new Node(testData.get(0));
@@ -305,6 +319,10 @@ public class displayStructures extends JFrame implements ActionListener {
         traverseBST(BST);
     }
 
+    /*
+      Description:
+          Iterates through binary search tree, concatenating value to appropriate string to create all three print method strings.
+    */
     void traverseBST(Node root)
     {
         if (root != null ) {
@@ -320,6 +338,10 @@ public class displayStructures extends JFrame implements ActionListener {
         }
     }
 
+    /*
+      Description:
+          Iterates through test data and uses addLast to implement first in first out structure. Then, sets text box result equal to queue string.
+    */
     public void createQueue(){
         int i;
         for (i = 0; i < testData.size(); i++)
@@ -329,6 +351,10 @@ public class displayStructures extends JFrame implements ActionListener {
         queueTxt.setText(queue.toString().replace("[", "").replace("]", ""));
     }
 
+    /*
+      Description:
+          Iterates through test data, and uses addFirst to implement first in last out structure. Then, sets text box result equal to stack string.
+    */
     public void createStack(){
         int i;
         for (i = 0; i < testData.size(); i++)
@@ -338,6 +364,11 @@ public class displayStructures extends JFrame implements ActionListener {
         stackTxt.setText(stack.toString().replace("[", "").replace("]", ""));
     }
 
+    /*
+      Description:
+          Initializes a linked list using Node structure, then iterates through test data, initializing new nodes and linking them to the previous.
+          Once finished, turns the linked list into a string and sets the Text box result equal to the linked list string.
+    */
     public void createLinkedList(){
         int i;
         Node linkedList = new Node(testData.get(0));

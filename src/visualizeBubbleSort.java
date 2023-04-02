@@ -12,6 +12,10 @@ public class visualizeBubbleSort extends JComponent{
     private final int max;
     private final List<Integer> currentFocus = new ArrayList<>();
 
+    /*
+      Description:
+          Displays test data array as bar graph, each element as a line or bar
+    */
     @Override
     protected void paintComponent(Graphics g)
     {
@@ -29,11 +33,19 @@ public class visualizeBubbleSort extends JComponent{
         }
     }
 
+    /*
+      Description:
+          Updates item array and repaints graph
+    */
     public void setItems(int[] items) {
         this.items = items;
         repaint();
     }
 
+    /*
+      Description:
+          Swing Worker used to sort items and update graph and item array with each swap
+    */
     class BubbleSortWorker extends SwingWorker<Void, int[]> {
         private final int[] items;
         public BubbleSortWorker(int[] unsortedItems) {

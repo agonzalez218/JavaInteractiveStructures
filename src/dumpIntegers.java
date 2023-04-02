@@ -34,7 +34,6 @@ public class dumpIntegers extends JFrame implements ActionListener {
         this.add(this.form);
     }
 
-
     public dumpIntegers(){
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.form.setLayout(null);
@@ -43,8 +42,6 @@ public class dumpIntegers extends JFrame implements ActionListener {
         addToForm();
         this.setVisible(true);
     }
-
-
 
     /*
       Description:

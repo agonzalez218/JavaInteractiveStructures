@@ -4,33 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2cda61e-04e3-4d36-b196-4a1b63a0cbbc" name="Changes" comment="Added Tooltips, fixed spacing, and finished dump test data">
+    <list default="true" id="e2cda61e-04e3-4d36-b196-4a1b63a0cbbc" name="Changes" comment="Removed debugging print statements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayAlgorithms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayAlgorithms.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayStructures$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayStructures$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayStructures.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/displayStructures.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/mainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/mainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/numberArraySelect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/numberArraySelect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeBubbleSort$BubbleSortWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeBubbleSort$BubbleSortWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeBubbleSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeBubbleSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeInsertionSort$InsertionSortWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeInsertionSort$InsertionSortWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeInsertionSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeInsertionSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeMergeSort$MergeSortWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeMergeSort$MergeSortWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeMergeSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeMergeSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeQuickSort$QuickSortWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeQuickSort$QuickSortWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeQuickSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeQuickSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeSelectionSort$SelectionSortWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeSelectionSort$SelectionSortWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeSelectionSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInteractiveStructures/visualizeSelectionSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/displayAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayAlgorithms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/displayStructures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayStructures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dumpIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dumpIntegers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/numberArraySelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/numberArraySelect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visualizeBubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualizeBubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visualizeInsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualizeInsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visualizeMergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualizeMergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visualizeQuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualizeQuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visualizeSelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualizeSelectionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infoIcon.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +163,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680452624579</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added code comments and finalized project">
+      <created>1680469298840</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680469298840</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Removed debugging print statements">
+      <created>1680469419756</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680469419756</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,7 +200,9 @@
     <MESSAGE value="Added Sort Algorithm Methods" />
     <MESSAGE value="Added Visualize Sort Algorithms" />
     <MESSAGE value="Added Tooltips, fixed spacing, and finished dump test data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Tooltips, fixed spacing, and finished dump test data" />
+    <MESSAGE value="Added code comments and finalized project" />
+    <MESSAGE value="Removed debugging print statements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed debugging print statements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
